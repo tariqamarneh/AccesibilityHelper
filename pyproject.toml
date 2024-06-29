@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "accessibility"
+version = "0.1.0"
+description = ""
+authors = ["tariqamarneh <tariqs.naser@gmail.com>"]
+readme = "README.md"
+packages = [{include = 'app'}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+uvicorn = "^0.29.0"
+selenium = "^4.21.0"
+langchain-openai = "^0.1.7"
+langchain = "^0.2.0"
+beautifulsoup4 = "^4.12.3"
+deepgram-sdk = "0.2.4"
+async-timeout = "^4.0.3"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+dev = "runserver:dev"
+start = "runserver:start"
